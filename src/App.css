@@ -1,0 +1,176 @@
+.container {
+  max-width: 90% !important;
+}
+
+.font-600 {
+  font-weight: 600 !important;
+}
+
+.font-500 {
+  font-weight: 500 !important;
+}
+
+.font-400 {
+  font-weight: 400 !important;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.text-gray {
+  color: #7a7a7a;
+}
+
+.text-yellow {
+  color: #b6ff00;
+}
+
+.bg-gray {
+  background-color: #292929;
+}
+
+h2 {
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  line-height: 1.2em !important;
+}
+
+h3 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 1.2em !important;
+}
+
+h4 {
+  font-size: 18px !important;
+  line-height: 24px !important;
+  font-weight: 600 !important;
+}
+
+h5 {
+  font-size: 16px !important;
+  line-height: 26px !important;
+  font-weight: 400 !important;
+}
+
+h6 {
+  font-size: 14px !important;
+  line-height: 22px !important;
+  font-weight: 400 !important;
+}
+.wrap-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.zIndex-1 {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 1px solid #002944;
+}
+
+
+/* Header------------------ */
+.nav-item>a,
+.nav-link {
+  color: rgb(4, 52, 84) !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+}
+.header-nav .dropdown-menu {
+  background: rgb(4, 52, 84);
+  border-bottom: 5px solid #FF7400;
+  border-radius: 10px 10px 10px 10px;
+  padding: 0;
+  overflow: hidden;
+}
+.header-nav .dropdown-menu>a {
+  color: #fff;
+  padding: 10px 30px;
+  font-weight: 600;
+  font-size: 17px;
+}
+.header-nav .dropdown-menu>a:hover {
+  color: rgb(4, 52, 84);
+}
+.header-nav .navbar-nav {
+  gap: 20px !important;
+}
+
+.marquee {
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Footer--------- */
+.footer-logo-wrapper {
+  width: 170px;
+}
+
+.footer-menu {
+  font-size: 20px !important;
+  line-height: 1.8em !important;
+}
+
+.footer-menu a:hover {
+  color: #FF0000 !important;
+}
+
+.top-footer {
+  bottom: 10%;
+}
+.bottom-footer{
+  background-color: #003152;
+}
+
+/* .footer-wrapper {
+    position: relative;
+} */
+.footer-wrapper {
+    background-color: #002D4B !important;
+}
+
+
+/* Breakpoints--------------------------------------------------------------- */
+@media (max-width: 1300px) {
+  .nav-menu {
+    padding: 10px 18px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-menu {
+    max-width: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 96% !important;
+  }
+}
+@media (max-width:600px) {
+  .footer-menu {
+      font-size: 18px !important;
+    }
+}

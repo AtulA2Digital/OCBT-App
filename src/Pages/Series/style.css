@@ -1,0 +1,26 @@
+.match-type-tabs button {
+  margin-right: 50px;
+}
+
+@media (max-width: 1200px) {
+  .match-type-tabs {
+    max-width: 1000px;
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 900px) {
+  .match-type-tabs {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 600px) {
+  .match-type-tabs {
+    max-width: 360px;
+  }
+  .match-type-tabs button {
+    margin-right: 10px;
+    min-width: 155px;
+  }
+}
