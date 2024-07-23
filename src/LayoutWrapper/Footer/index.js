@@ -52,44 +52,12 @@ const SocialIcon = ({ icon, link, hoverColor }) => {
 
 const Footer = () => {
   const NavigationMenu = [
-    { menuName: "View All Betting Sites", link: "/cricket" },
-    { menuName: "Today Match Prediction", link: "/sports" },
-    { menuName: "T20 Cricket Prediction", link: "/web-stories" },
-    { menuName: "Cricket Betting Odds", link: "/bollywood" },
-    { menuName: "Live Score", link: "/business" },
-    { menuName: "How to Bet", link: "/e-games" },
-  ];
-  const FollowUsOnList = [
-    {
-      title: "Facebook",
-      icon: <FacebookRoundedIcon fontSize="large" />,
-      link: "https://www.facebook.com/armaniexch247news",
-      hoverColor: "#3b5998", // Facebook blue
-    },
-    {
-      title: "Twitter",
-      icon: <TwitterIcon fontSize="large" />,
-      link: "https://twitter.com/Armaniex247News",
-      hoverColor: "#1da1f2", // Twitter blue
-    },
-    {
-      title: "Instagram",
-      icon: <InstagramIcon fontSize="large" />,
-      link: "https://www.instagram.com/armaniexch247news/",
-      hoverColor: "#c13584", // Instagram pink
-    },
-    {
-      title: "Youtube",
-      icon: <YouTubeIcon fontSize="large" />,
-      link: "https://www.youtube.com/channel/UCcQpD_qoFbi0EixcKvYlz6Q",
-      hoverColor: "#ff0000", // YouTube red
-    },
-    {
-      title: "Whatsapp",
-      icon: <WhatsAppIcon fontSize="large" />,
-      link: "https://wa.link/j1mbds",
-      hoverColor: "#25d366", // WhatsApp green
-    },
+    { menuName: "View All Betting Sites", link: "betting-sites" },
+    { menuName: "Today Match Prediction", link: "today-match-prediction" },
+    { menuName: "T20 Cricket Prediction", link: "t20-cricket-prediction" },
+    { menuName: "Cricket Betting Odds", link: "odds" },
+    { menuName: "Live Score", link: "live-score" },
+    { menuName: "How to Bet", link: "guide" },
   ];
   return (
     <>
@@ -99,23 +67,9 @@ const Footer = () => {
           <Grid container className="zIndex-1 justify-between gap-lg-1 gap-5">
             <Grid item lg={3.2} xs={12} className="text-lg-start text-center">
               <Box className="footer-logo-wrapper mx-lg-0 mx-auto">
-                <Link to="https://armaniexch247news.com/">
+                <Link to="https://cricketbettingtips.org/">
                   <img src={FooterLogo} alt="footer logo" />
                 </Link>
-              </Box>
-              <Typography variant="h3" className="mt-lg-4 mt-5">
-                {" "}
-                <span className="">FOLLOW US</span>
-              </Typography>
-              <Box className="social-icons-wrapper mt-3">
-                {FollowUsOnList.map((socialIcon, ind) => (
-                  <SocialIcon
-                    key={ind}
-                    icon={socialIcon.icon}
-                    link={socialIcon.link}
-                    hoverColor={socialIcon.hoverColor}
-                  />
-                ))}
               </Box>
             </Grid>
             <Grid item lg={5.3} xs={12}>
@@ -153,7 +107,7 @@ const Footer = () => {
                       }}
                     />{" "}
                     <Link
-                      to={`https://armaniexch247news.com${val.link}`}
+                      to={`https://cricketbettingtips.org/${val.link}`}
                       className="text-white"
                     >
                       {val.menuName}
@@ -171,7 +125,7 @@ const Footer = () => {
           <Grid container className="zIndex-1 justify-between gap-md-2 gap-4">
             <Grid item lg={3.2} sm={4} xs={12}>
               <Box className="footer-logo-wrapper mx-sm-0 mx-auto">
-                <Link to="https://armaniexch247news.com/">
+                <Link to="https://cricketbettingtips.org/">
                   <img src={Begambleaware} alt="footer logo" />
                 </Link>
               </Box>

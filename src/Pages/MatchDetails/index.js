@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { postAPIHandler } from "../../Api";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
@@ -8,8 +8,8 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
 const MatchDetails = () => {
   const [matchInfo, setMatchInfo] = useState(null);
-  // console.log("matchInfo - ", matchInfo);
   const [liveInfo, setLiveInfo] = useState(null);
+  // console.log("liveInfo - ", liveInfo);
   const [matchStatus, setMatchStatus] = useState("UPCOMING");
   const [countdown, setCountdown] = useState("00:00:00");
   // console.log("matchStatus - ", matchStatus);
@@ -58,8 +58,8 @@ const MatchDetails = () => {
         .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
     } else {
       if (
-        matchInfo.data.result.length === 0 &&
-        matchInfo.data.toss.length === 0
+        (matchInfo && matchInfo.data.result.length === 0) &&
+        (matchInfo && matchInfo.data.toss.length === 0)
       ) {
         return "Details will appear once the match starts.";
       }
@@ -130,6 +130,13 @@ const MatchDetails = () => {
     // Join the words back into a sentence
     return capitalizedWords.join(" ");
   };
+
+  const formatUrlString = (str) => {
+    return str
+      .toLowerCase()
+      .replace(/ /g, '-')
+      .replace(/[^a-z0-9-']/g, '');
+  };
   return (
     <>
       {matchInfo && (
@@ -142,7 +149,7 @@ const MatchDetails = () => {
           </div>
           {/* Details */}
           <div className="pb-3 border-b-2 mb-4 border-[#e4e6eb] text-[#002D4B]">
-            <div className="d-flex xl:w-[90%] w-[95%] mx-auto text-[18px] pb-2 justify-center gap-5">
+            <div className="d-flex flex-wrap flex-md-row flex-column xl:w-[90%] w-[95%] mx-auto text-[18px] pb-2 justify-center gap-md-5 gap-4">
               <span className="flex items-center gap-2">
                 <CalendarMonthIcon
                   style={{ color: "#000", fontSize: "30px" }}
@@ -162,8 +169,10 @@ const MatchDetails = () => {
                 {matchInfo.data.venue}
               </span>
               <span className="flex items-center gap-2">
-                <EmojiEventsIcon style={{ color: "#000", fontSize: "30px" }} />
-                {matchInfo.data.series}
+                <Link className="text-[#002d4b]" to={`/series-details/${matchInfo.data.series_id}/${formatUrlString(matchInfo.data.team_a + " vs " + matchInfo.data.team_b + " " + matchInfo.data.series)}`}>
+                  <EmojiEventsIcon style={{ color: "#000", fontSize: "30px" }} />
+                  {matchInfo.data.series}
+                </Link>
               </span>
             </div>
           </div>
@@ -181,13 +190,11 @@ const MatchDetails = () => {
           {/* Counter */}
           <div className="lg:text-[18px] text-[15px] text-center font-[600] pt-4 text-[#002D4B]">
             <span className="capitalize">
-              {liveInfo.result.length > 0
+              {liveInfo && (liveInfo.result.length > 0
                 ? capitalizeSentence(liveInfo.result)
-                : liveInfo.trail_lead
-                  ? capitalizeSentence(liveInfo.trail_lead)
-                  : liveInfo.toss.length > 0
-                    ? capitalizeSentence(liveInfo.toss)
-                    : countdown}
+                : liveInfo.toss.length > 0
+                  ? capitalizeSentence(liveInfo.toss)
+                  : countdown)}
             </span>
           </div>
           {/* Teams Score */}

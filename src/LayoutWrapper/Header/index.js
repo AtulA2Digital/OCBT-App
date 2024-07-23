@@ -9,6 +9,15 @@ import { Link } from "react-router-dom";
 import { NavDropdown } from "react-bootstrap";
 
 function Header() {
+  const tournamentsList = [
+    { name: "Lanka Premier League", link: "/prediction/series-details/369/lanka-premier-league-2024" },
+    { name: "Tamil Nadu Premier League", link: "/prediction/series-details/370/tamil-nadu-premier-league-2024" },
+    { name: "Major League Cricket 2024", link: "/prediction/series-details/384/major-league-cricket-2024" },
+    { name: "West Indies tour of England, 2024", link: "/prediction/series-details/366/west-indies-tour-of-england-2024" },
+    { name: "Womens Asia Cup T20, 2024", link: "/prediction/series-details/374/womens-asia-cup-t20-2024" },
+    { name: "India tour of Sri Lanka, 2024", link: "/prediction/series-details/408/india-tour-of-sri-lanka-2024" },
+    { name: "All Series »", link: "/prediction/tournaments" },
+  ];
   return (
     <>
       {["xl"].map((expand) => (
@@ -18,7 +27,10 @@ function Header() {
           className="bg-white header-nav py-4"
         >
           <Container>
-            <Link to="/" className="header-logo  p-0">
+            <Link
+              to="https://cricketbettingtips.org/"
+              className="header-logo  p-0"
+            >
               <img src={Logo} className="md:w-[130px] w-[110px]" alt="logo" />
             </Link>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}>
@@ -41,18 +53,7 @@ function Header() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="gap-5">
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  {/* {menuList.map((val, ind) => {
-                    return (
-                      <Nav.Link
-                        href={`https://armaniexch247news.com${val.link}`}
-                        className="nav-menu bg-white text-black font-500 text-uppercase"
-                        key={ind}
-                      >
-                        {val.menuName}
-                      </Nav.Link>
-                    );
-                  })} */}
+                <Nav className="justify-content-end flex-grow-1">
                   <NavDropdown
                     title="Betting Sites"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -69,12 +70,12 @@ function Header() {
                     title="Tournaments"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#">
-                      Lanka Premier League
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Tamil Nadu Premier League
-                    </NavDropdown.Item>
+                    {tournamentsList.map((tournament, ind) => {
+                      return (<NavDropdown.Item href={tournament.link} key={ind}>
+                        {tournament.name}
+                      </NavDropdown.Item>)
+                    })}
+
                   </NavDropdown>
                   <NavDropdown
                     title="Cricket Betting Tips"
@@ -85,6 +86,12 @@ function Header() {
                     </NavDropdown.Item>
                     <NavDropdown.Item href="https://cricketbettingtips.org/t20-cricket-prediction/">
                       T20 Cricket Prediction
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="https://cricketbettingtips.org/odi-cricket-prediction/">
+                      ODI Cricket Prediction
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="https://cricketbettingtips.org/test-cricket-prediction/">
+                      Test Cricket Prediction
                     </NavDropdown.Item>
                     <NavDropdown.Item href="">
                       Dream11 Prediction
