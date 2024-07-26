@@ -5,8 +5,16 @@ import "./style.css"
 
 const Series = () => {
   const [seriesList, setSeriesList] = useState();
+<<<<<<< HEAD
   const [activeSeriesList, setActiveSeriesList] = useState();
   const [getAllMatchesList, setGetAllMatchesList] = useState(true);
+=======
+  // console.log("seriesList - ", seriesList);
+  const [activeSeriesList, setActiveSeriesList] = useState();
+  // console.log("activeSeriesList - ", activeSeriesList);
+  const [getAllMatchesList, setGetAllMatchesList] = useState(true);
+  // console.log("getAllMatchesList - ", getAllMatchesList);
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
 
   useEffect(() => {
     if (!seriesList || seriesList.length === 0) {
@@ -16,6 +24,11 @@ const Series = () => {
     GetAllSeriesList()
   }, [getAllMatchesList, activeSeriesList]); // Include activeSeriesList in dependency array
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
   let GetAllSeriesList = async () => {
     const response = await getAPIHandler("seriesList")
     // console.log("response - ", response);
@@ -37,7 +50,10 @@ const Series = () => {
       return acc;
     }, {});
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
   let matchesGroupedByDate;
   if (seriesList !== undefined) {
 
@@ -47,6 +63,10 @@ const Series = () => {
     }
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
   // Format URL------------------
   const formatUrlString = (str) => {
     return str
@@ -57,13 +77,19 @@ const Series = () => {
 
   return (
     <div>
+<<<<<<< HEAD
       {/* Banner */}
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
       <div className="bg-gradient-to-r from-[#00395F] to-[#002944] py-5 mb-5">
         <p className="text-white md:text-[30px] text-[24px] font-semibold px-4 flex items-center justify-center gap-x-4 mb-0">
           Cricket Series & Tournaments
         </p>
       </div>
+<<<<<<< HEAD
       {/* Tabs */}
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
       <div className="pb-3 border-b-2 mb-4 border-[#e4e6eb] ">
         <div className="d-flex  match-type-tabs xl:w-[90%] w-[95%] mx-auto text-[18px] pb-2">
           <button
@@ -118,7 +144,10 @@ const Series = () => {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Cards */}
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
       <div className="xl:w-[90%] w-[95%] mx-auto my-10">
         {matchesGroupedByDate !== undefined ? Object.keys(matchesGroupedByDate).map((date) => (
           <div key={date} className=" d-flex flex-wrap gap-lg-4 gap-3">

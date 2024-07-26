@@ -131,7 +131,11 @@ a {
 }
 
 .footer-menu {
+<<<<<<< HEAD
   font-size: 18px !important;
+=======
+  font-size: 20px !important;
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
   line-height: 1.8em !important;
 }
 

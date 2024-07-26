@@ -5,12 +5,15 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import SportsCricketIcon from "@mui/icons-material/SportsCricket";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+<<<<<<< HEAD
 import MatchInfo from "../../Components/MatchDetails/MatchInfo";
 import Commentary from "../../Components/MatchDetails/Commentary";
 import Scorecard from "../../Components/MatchDetails/Scorecrad";
 import PitchReport from "../../Components/MatchDetails/PitchReport";
 import Squads from "../../Components/MatchDetails/Squads";
 import PointsTable from "../../Components/MatchDetails/PointTable";
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
 
 const MatchDetails = () => {
   const [matchInfo, setMatchInfo] = useState(null);
@@ -20,7 +23,10 @@ const MatchDetails = () => {
   const [countdown, setCountdown] = useState("00:00:00");
   // console.log("matchStatus - ", matchStatus);
   const { matchId, seriesId } = useParams();
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState("Match Info");
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
 
 
 
@@ -154,7 +160,10 @@ const MatchDetails = () => {
               {liveInfo?.team_a} vs {liveInfo?.team_b}, {matchInfo?.data.matchs}
             </p>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
           {/* Details */}
           <div className="pb-3 border-b-2 mb-4 border-[#e4e6eb] text-[#002D4B]">
             <div className="d-flex flex-wrap flex-md-row flex-column xl:w-[90%] w-[95%] mx-auto text-[18px] pb-2 justify-center gap-md-5 gap-4">
@@ -184,7 +193,10 @@ const MatchDetails = () => {
               </span>
             </div>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
           {/* Match Status */}
           <div className="text-center">
             <span
@@ -196,7 +208,10 @@ const MatchDetails = () => {
               {matchStatus}
             </span>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
           {/* Counter */}
           <div className="lg:text-[18px] text-[15px] text-center font-[600] pt-4 text-[#002D4B]">
             <span className="capitalize">
@@ -207,7 +222,10 @@ const MatchDetails = () => {
                   : countdown)}
             </span>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
           {/* Teams Score */}
           {liveInfo && (
             <div className="text-[#002D4B] lg:w-[55%] w-[90%] mx-auto md:px-5 px-[20px] py-5 flex justify-between">
@@ -217,12 +235,18 @@ const MatchDetails = () => {
                     className=" w-[60px] h-[60px] rounded-lg object-cover shadow-lg shadow-[#bfb4b4] border-2 border-[#00000012"
                     src={liveInfo.team_a_img}
                   />
+<<<<<<< HEAD
                   <p className="lg:text-[24px] text-[15px] font-[600] mb-0 md:block hidden">
                     {liveInfo.team_a}
                   </p>
                   <p className="lg:text-[24px] text-[15px] font-[600] mb-0 md:hidden block">
                     {liveInfo.team_a_short}
                   </p>
+=======
+                  <p className="lg:text-[24px] text-[15px] font-[600] mb-0">
+                    {liveInfo.team_a}
+                  </p>
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
                 </div>
                 <p className="mb-0 mt-4">
                   <span className="lg:text-[22px] text-[15px] font-[600] mb-0">
@@ -249,12 +273,18 @@ const MatchDetails = () => {
                     className=" w-[60px] h-[60px] rounded-lg object-cover shadow-lg shadow-[#bfb4b4] border-2 border-[#00000012]"
                     src={liveInfo.team_b_img}
                   />
+<<<<<<< HEAD
                   <p className="lg:text-[24px] text-[15px] font-[600] mb-0 md:block hidden">
                     {liveInfo.team_b}
                   </p>
                   <p className="lg:text-[24px] text-[15px] font-[600] mb-0 md:hidden block">
                     {liveInfo.team_b_short}
                   </p>
+=======
+                  <p className="lg:text-[24px] text-[15px] font-[600] mb-0">
+                    {liveInfo.team_b}
+                  </p>
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
                 </div>
                 <p className="mb-0 mt-4">
                   <span className="lg:text-[22px] text-[15px] font-[600] mb-0">
@@ -277,6 +307,7 @@ const MatchDetails = () => {
               </div>
             </div>
           )}
+<<<<<<< HEAD
 
           {/* Tabs */}
           <div className="py-2 border-y-2 border-[#e4e6eb] ">
@@ -346,6 +377,8 @@ const MatchDetails = () => {
           {activeTab === "Squads" && <Squads />}
           {activeTab === "Points Table" && <PointsTable />}
 
+=======
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
         </>
       )}
     </>

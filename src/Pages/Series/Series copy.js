@@ -38,7 +38,11 @@ const Series = () => {
 
   return (
     <div className="xl:w-[90%] w-[95%] mx-auto px-2 my-10 py-7">
+<<<<<<< HEAD
       <div className="bg-gradient-to-r from-[#002D4B] to-[#141815] rounded-lg py-3 mb-5 sm:w-[90%] mx-auto">
+=======
+      <div className="bg-gradient-to-r from-[#39441d] to-[#141815] rounded-lg py-3 mb-5 sm:w-[90%] mx-auto">
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
         <p className="text-white md:text-[30px] text-[24px] font-semibold px-4 flex items-center justify-center gap-x-4 mb-0">
           <img
             // src={Squads_Icon}
@@ -102,7 +106,11 @@ const Series = () => {
       </div>
       {Object.keys(matchesGroupedByDate).map((date) => (
         <div key={date} className="">
+<<<<<<< HEAD
           <div className="flex md:mb-5 mb-[20px] justify-start items-center w-100 py-3 rounded-lg bg-gradient-to-r from-[#002D4B] to-[#141815] px-3 text-left text-xl font-bold">
+=======
+          <div className="flex md:mb-5 mb-[20px] justify-start items-center w-100 py-3 rounded-lg bg-gradient-to-r from-[#39441d] to-[#141815] px-3 text-left text-xl font-bold">
+>>>>>>> db9d529c79b87f2c3a6735d1a3f3e29a19acd1ba
             <span className="lg:w-[200px] w-[150px] text-white">Month</span>{" "}
             {/* Display date */}
             <span className="text-white w-full ">Series Name</span>
