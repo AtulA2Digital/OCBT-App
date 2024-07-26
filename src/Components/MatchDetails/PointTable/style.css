@@ -1,0 +1,10 @@
+.point-table-keys span {
+    width: 25px;
+    display: inline-block;
+}
+
+@media (max-width:600px) {
+    .point-table-keys span.nrr {
+        width: 50px;
+    }
+}
